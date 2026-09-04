@@ -31,4 +31,29 @@ public class CargoZenController {
     public String register(@RequestParam(required = false)String role){
         return "register";
     }
+
+    @GetMapping("/book-shipment")
+    public String bookShipment(){
+        return "book-shipment";
+    }
+
+    @GetMapping("/shipments")
+    public String shipments(){
+        return "shipments";
+    }
+
+    @GetMapping("/shipment")
+    public String shipment(){
+        return "shipment";
+    }
+
+    @GetMapping("/customer-dashboard")
+    public String customerDashboard(){
+        return "customer-dashboard";
+    }
+
+    @GetMapping("/logout")
+    public String logout(){
+        return "redirect:/";
+    }
 }
