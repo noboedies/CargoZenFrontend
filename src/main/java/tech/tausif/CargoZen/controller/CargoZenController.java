@@ -3,6 +3,7 @@ package tech.tausif.CargoZen.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import tech.tausif.CargoZen.service.AiService;
@@ -17,5 +18,17 @@ public class CargoZenController {
     @RequestMapping(value = {"/", "/index", "/home"})
     public String home(){
         return "index";
+    }
+
+    //role based or neutral login page.
+    @GetMapping("/login")
+    public String login(@RequestParam(required = false) String role){
+        return "login";
+    }
+
+    //Role based or neutral signup Page;
+    @GetMapping("/register")
+    public String register(@RequestParam(required = false)String role){
+        return "register";
     }
 }
