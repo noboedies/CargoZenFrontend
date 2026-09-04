@@ -14,7 +14,7 @@ public class CargoZenController {
     @Autowired
     private AiService aiService;
 
-    @RequestMapping(value = {"/", "/index". "/home"})
+    @RequestMapping(value = {"/", "/index", "/home"})
     public String home(){
         return "index";
     }
