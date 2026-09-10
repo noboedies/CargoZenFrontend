@@ -1,7 +1,14 @@
 package tech.tausif.CargoZen.beans;
 
-public class Customer {
 
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
+public class Customer {
 
     private String email;
     private String username;
