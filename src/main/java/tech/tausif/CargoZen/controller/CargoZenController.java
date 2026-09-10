@@ -49,11 +49,6 @@ public class CargoZenController {
         return "shipment";
     }
 
-    @GetMapping("/customer-dashboard")
-    public String customerDashboard(){
-        return "customer-dashboard";
-    }
-
     @GetMapping("/logout")
     public String logout(){
         return "redirect:/";
