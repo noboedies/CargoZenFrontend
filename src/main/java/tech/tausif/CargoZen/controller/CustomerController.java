@@ -4,6 +4,7 @@ package tech.tausif.CargoZen.controller;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -29,5 +30,10 @@ public class CustomerController {
             ra.addFlashAttribute("msg", "Customer Email Already Exist");
             return "redirect:/register";
         }
+    }
+
+    @GetMapping("/customer-dashboard")
+    public String customerDashboard(){
+        return "customer-dashboard";
     }
 }
